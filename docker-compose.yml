@@ -1,0 +1,24 @@
+version: "3.4"
+
+volumes:
+  volume_name:
+    name: greener_thumb_data
+
+services:
+  db:
+    image: "postgres:12"
+    container_name: "db"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=greener_thumb_development
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./.tmp/db:/var/lib/postgresql/greener_thumb_data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      start_period: 10s
+      timeout: 4s
+      retries: 3
