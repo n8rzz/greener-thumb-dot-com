@@ -24,4 +24,4 @@ description: ''
 draft: False
 
 # This is a list of directories that Sweep will not be able to edit.
-blocked_dirs: []
+blocked_dirs: ["./.tmp", "./tmp"]
