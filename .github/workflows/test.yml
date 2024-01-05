@@ -15,7 +15,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Set up Ruby
-        uses: actions/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         with:
           
       - name: Install dependencies
@@ -28,7 +28,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Set up Ruby
-        uses: actions/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         with:
           
       - name: Restore bundle cache and install dependencies
@@ -43,7 +43,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Set up Ruby
-        uses: actions/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
       - name: Restore bundle cache and install dependencies
         run: bundle install --jobs 4 --retry 3
       - name: Run integration tests
