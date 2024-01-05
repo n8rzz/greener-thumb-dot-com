@@ -1,0 +1,15 @@
+# .rubocop.yml
+
+require:
+  - rubocop-performance
+  - rubocop-rails
+
+AllCops:
+  TargetRubyVersion: 2.7
+  NewCops: enable
+
+Bundler/ExactVersion:
+  Enabled: true
+  Description: 'New dependencies should include an exact version number.'
+
+# Other rules...
