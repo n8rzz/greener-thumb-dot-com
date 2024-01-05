@@ -1,4 +1,4 @@
-2.7.3name: Run Tests
+.ruby-versionname: Run Tests
 
 on:
   pull_request:
@@ -17,7 +17,7 @@ jobs:
       - name: Set up Ruby
         uses: actions/setup-ruby@v1
         with:
-          ruby-version: 2.7.3
+          
       - name: Install dependencies
         run: bundle install --jobs 4 --retry 3
 
@@ -30,7 +30,7 @@ jobs:
       - name: Set up Ruby
         uses: actions/setup-ruby@v1
         with:
-          ruby-version: 2.7.3
+          
       - name: Restore bundle cache and install dependencies
         run: bundle install --jobs 4 --retry 3
       - name: Run unit tests
