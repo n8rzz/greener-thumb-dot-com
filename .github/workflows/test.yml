@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
-        with:
+        with: {} # <- COMMENT: Still valid
           
       - name: Install dependencies
         run: bundle install --jobs 4 --retry 3
@@ -29,7 +29,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
-        with:
+        with: {} # <- COMMENT: Still valid
           
       - name: Restore bundle cache and install dependencies
         run: bundle install --jobs 4 --retry 3
